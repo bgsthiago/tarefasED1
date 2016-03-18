@@ -95,12 +95,11 @@ int vazio (vet v){
 
 // Retorna o elemento na posicao ind
 elem_t acessa (vet v, int ind){
-	int i = 1;
+	int i = 0;
 	vet *aux;
 	if(!vazio(v)){
 		aux = v.prox;
-		while(aux->prox != NULL && i <= ind){
-			printf("%d\n", aux->item);
+		while(aux->prox != NULL && i <= ind-2){
 			aux = aux->prox;
 			i++;	
 		}

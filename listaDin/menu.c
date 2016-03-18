@@ -36,14 +36,14 @@ int main(){
 			case 3:
 				printf("Digite o valor a ser inserido:\n");
 				scanf("%d", &n);
-				if(insereIni(&li, n))
+				if(insere(&li, n))
 					printf("Inserido com sucesso\n");
 				else
 					printf("Erro.\n");
 			break;
 
 			case 4:
-				if(retiraIni(&li, &n))
+				if(retira(&li, &n))
 					printf("Elemento %d removido com sucesso.\n", n);
 				else
 					printf("Erro.\n");
