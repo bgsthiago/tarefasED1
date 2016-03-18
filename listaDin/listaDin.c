@@ -99,7 +99,7 @@ elem_t acessa (vet v, int ind){
 	vet *aux;
 	if(!vazio(v)){
 		aux = v.prox;
-		while(aux->prox != NULL && i <= ind-2){
+		while(aux->prox != NULL && i <= ind-2){ //POG, n entendi isso aqui, só sei que funcionou
 			aux = aux->prox;
 			i++;	
 		}
