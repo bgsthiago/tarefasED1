@@ -11,7 +11,7 @@ void inicia (vet *v){
 // Insere um elemento no inicio do vetor. Retorna 1 se a inserçao ocorreu com sucesso ou 0 caso contrario.
 int insereIni (vet *v, elem_t n){
 	vet *no = (vet*) malloc(sizeof(vet));
-	if(no == NULL) 
+	if(no == NULL)
 		return 0;
 	no->item = n;
 	no->prox = v->prox;
@@ -26,7 +26,7 @@ int retiraIni (vet *v, elem_t *elemRemovido){
 		aux = v->prox;
 		*elemRemovido = aux->item;
 		v->prox = aux->prox;
-		free(aux);		
+		free(aux);
 		return 1;
 	}
 	return 0;
@@ -101,7 +101,7 @@ elem_t acessa (vet v, int ind){
 		aux = v.prox;
 		while(aux->prox != NULL && i <= ind-2){ //POG, n entendi isso aqui, só sei que funcionou
 			aux = aux->prox;
-			i++;	
+			i++;
 		}
 	}
 	return aux->item;

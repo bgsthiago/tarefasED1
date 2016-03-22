@@ -38,3 +38,5 @@ elem_t acessa (vet v, int ind);
 // Retorna o numero de elementos do vetor
 int tamanho(vet v);
 
+// Imprime o vetor
+void exibir(vet v);
