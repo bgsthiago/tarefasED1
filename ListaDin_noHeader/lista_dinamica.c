@@ -84,8 +84,35 @@ int ordenada(Lista *p_l){
 }
 
 /* Ordena a lista */
-void ordena(Lista *p_l){
+void ordena(Lista *p_l){ //bubble sort
+	printf("erro");
+	No_lista *p, *q, *r;
 
+	int size = tamanho(p_l), cont;
+	for(size - 1; size >= 1; size--){
+		q = *p_l;
+		p = q->prox;
+		r = NULL;
+		for(cont = 0; cont < size; cont++){
+			if(q->info > p->info){
+				if(r == NULL)
+					*p_l = p;
+				else
+					r->prox = q->prox;
+
+					q->prox = p->prox;
+					p->prox = q;
+					r = p;
+					q = r->prox;
+					p = q->prox;
+			}
+			else{
+				r = q;
+				q = q->prox;
+				p = p->prox;
+			}
+		}
+	}
 }
 
 int tamanho(Lista *p_l){
